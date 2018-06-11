@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div class="flex-center">
+  <form [formGroup]="formulario">
+    <mat-form-field class="example-full-width">
+      <input matInput [matDatepicker]="picker" placeholder="Data de início" formControlName="dataInicio" readonly>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput [min]="formulario.controls['dataInicio'].value" [matDatepicker]="picker1" placeholder="Data de término" formControlName="dataFim"
+        readonly>
+      <mat-error *ngIf="!formulario.controls['valid']">Data inváilda</mat-error>
+      <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+      <mat-datepicker #picker1></mat-datepicker>
+    </mat-form-field>
+
+    <button class="botao" (click)=" mostraDados()">Gerar Gráfico</button>
+  </form>
+
+  <div class="spinner-container" [class.invisivel]="!showSpinner">
+    <mat-spinner></mat-spinner>
+  </div>
+</div>
+
+<div *ngIf="dados !== undefined">
+  <div class="grafico" style="display: block">
+    <app-grafico [dados]="dados"></app-grafico>
+    <app-tabela [dados]="dados"></app-tabela>
+  </div>
+</div>

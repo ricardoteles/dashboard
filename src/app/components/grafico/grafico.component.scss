@@ -1,0 +1,99 @@
+$corDoTotal : #0E4965;
+$verde: #3BDC8A;
+$vermelho: #EE7777;
+
+.l-graphic {
+    height: 400px;
+    width: 910px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    ngx-charts-pie-chart {
+        left: 50%;
+        margin-left: -325px;
+        position: absolute;
+    }
+    .ngx-charts-outer,
+    .ngx-charts {
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .l-graphic__text {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+            .info__icon {
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                align-content: center;
+                .mat-icon {
+                    align-self: center;
+                    font-size: 40px;
+                    width: 40px;
+                    height: 40px;
+                    margin-right: 20px;
+                }
+            }
+            .info__number {
+                font-size: 64px;
+                font-weight: 800;
+                letter-spacing: 0.2px;	
+                line-height: 87px;
+                margin-top: -15px
+            }
+        }
+        .total {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            small {
+                color: #0E4965;
+                font-size: 14px;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+            .info__number {
+                font-size: 64px;
+                font-weight: 800;
+                letter-spacing: 0.2px;	line-height: 87px;
+            }
+        }
+        .is-approval {
+            color: $verde;
+        }
+        .is-total {
+            color: $corDoTotal;
+        }
+        .not-approval {
+            color: $vermelho;
+        }
+                
+        .destaque{
+            font-size: 20px;
+            font-weight: bold;
+        }
+                
+        .label {
+            color: rgb(136, 132, 132);
+        }
+    }
+}
+
+.l-graphic[_ngcontent-c5] {
+    height: 360px;
+    margin-bottom: 50px;
+}

@@ -1,0 +1,73 @@
+mat-expansion-panel {
+  width:910px;
+  margin-bottom: 40px;
+}
+
+
+mat-panel-title {
+    text-transform: uppercase;
+
+    height: 24px;
+    width: 100px;
+    color: #1585B1;
+    font-family: "Open Sans";
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 0.2px;
+    line-height: 24px
+
+}
+
+mat-header-row {
+  border-bottom: 2px solid #0B4874;
+}
+
+.tabela {
+  min-width: 500px;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    overflow: auto;
+    max-height: 500px;
+  }
+
+  .col-order {
+    width: 2rem;
+    flex: inherit;
+  }
+
+  .col-qtd {
+    width: 8rem;
+    flex: inherit;
+    text-align: center;
+  }
+
+  .mat-row:last-child {
+    border: none;
+  }
+
+  .mat-elevation-z8 {
+    box-shadow: inherit;
+  }
+
+  .mat-expansion-panel-header {
+    border-bottom: 1px solid #dad9d9;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+  }
+  
+  .mat-header-cell.mat-sort-header-sorted {
+    color: black;
+  }
+
+  .mat-expansion-panel:not([class*=mat-elevation-z]) {
+    box-shadow: 0 0px 0px 0px rgba(0,0,0,.1), 0 0px 0px 0 rgba(0,0,0,.1), 0 1px 5px 0 rgba(0,0,0,.05);
+    border-radius: 3px;
+  }
+
+  .mat-expansion-panel[_ngcontent-c6] {
+    border-radius: 3px;
+  }

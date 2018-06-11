@@ -1,0 +1,28 @@
+{
+	   "listaPropostaPorStatusEtapa":       [
+ 		   {
+ 			 "status": "APROVADA",
+ 			 "etapa": "ENVIO_SIV",
+			  "qtddPropostas": 2,
+			  "valor": 300100
+ 		   },
+ 		   {
+				"status": "ERROPOLITICA",
+				"etapa": "CONSULTA_NEUROTECH",
+				"qtddPropostas": 2,
+				"valor": 400000
+        	},
+ 		   {
+				"status": "CRITICADADOS",
+				"etapa": "ENVIO_SIV",
+				"qtddPropostas": 7,
+				"valor": 500000
+			},
+ 		   {
+				"status": "PROPANDAMENTO",
+				"etapa": "ENVIO_SIV",
+				"qtddPropostas": 1,
+				"valor": 600000
+ 		  }
+ 	   ]
+}

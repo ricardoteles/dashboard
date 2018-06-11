@@ -1,0 +1,62 @@
+// /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+html {
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #efefef;
+    overflow-y: scroll;
+}
+
+h1 {
+    margin: 0;
+}
+
+.text-light {
+    font-weight: 100;
+}
+
+.text-bolder {
+    font-weight: 800;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.ngx-charts-outer {
+    display: flex;
+    display: flex;
+    align-items: center;
+}
+
+ngx-charts-legend {
+    order: -1;
+}
+
+.chart-legend .legend-title {
+    display: none;
+}
+
+.chart-legend .legend-label {
+    color: #888484 !important;
+}
+
+.chart-legend .legend-labels {
+    background: none !important;
+    width: 260px !important;
+}
+
+.chart-legend .legend-label-color {
+    border-radius: 10px !important;
+}
+
+.invisivel {
+    display: none;
+  }

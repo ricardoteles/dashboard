@@ -1,0 +1,38 @@
+<div class="l-graphic">
+
+  <ngx-charts-pie-chart [view]="view" map='' lenght='' [scheme]="colorScheme" [results]="dadosGrafico" [legend]="showLegend"
+    arcWidth="0.3" [labels]="showLabels" [doughnut]="true" [gradient]="false" (select)="onSelect($event)">
+  </ngx-charts-pie-chart>
+
+  <div class="l-graphic__text">
+    <div class="dashboard aprovada info">
+      <div class="info__icon">
+        <mat-icon class="is-approval">check_circle_outline</mat-icon>
+        <p class="destaque label">Aprovadas </p>
+      </div>
+      <div class="info__number">
+        <strong class="is-approval">{{qtdePropostasAprovadas}}</strong>
+      </div>
+    </div>
+
+    <div class="total">
+      <small>Total de
+        <span class="destaque">propostas
+        </span>
+      </small>
+      <div class="info__number">
+        <strong class="is-total">{{qtdeTotalPropostas}}</strong>
+      </div>
+    </div>
+
+    <div class="dashboard reprovada info">
+      <div class="info__icon">
+        <mat-icon class=" not-approval">highlight_off</mat-icon>
+        <p class="destaque label">Reprovadas</p>
+      </div>
+      <div class="info__number">
+        <strong class="not-approval">{{qtdePropostasReprovadas}}</strong>
+      </div>
+    </div>
+  </div>
+</div>

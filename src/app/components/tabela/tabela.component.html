@@ -1,0 +1,48 @@
+<div class="tabela flex-center">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Registros
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <div class="example-container mat-elevation-z8">
+      <mat-table #table [dataSource]="dataSource" matSort>
+
+        <!-- Coluna index -->
+        <ng-container matColumnDef="index">
+          <mat-header-cell *matHeaderCellDef mat-sort-header class="col-order"> # </mat-header-cell>
+          <mat-cell *matCellDef="let item" class="col-order">{{ listaPropostas.indexOf(item) + 1 }}</mat-cell>
+        </ng-container>
+
+        <!-- Coluna Etapa -->
+        <ng-container matColumnDef="etapa">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Etapa </mat-header-cell>
+          <mat-cell *matCellDef="let item"> {{item.etapa}} </mat-cell>
+        </ng-container>
+
+        <!-- Coluna Status -->
+        <ng-container matColumnDef="status">
+          <mat-header-cell *matHeaderCellDef mat-sort-header> Status </mat-header-cell>
+          <mat-cell *matCellDef="let item"> {{item.status}} </mat-cell>
+        </ng-container>
+
+        <!-- Coluna Quantidade -->
+        <ng-container matColumnDef="qtddPropostas">
+          <mat-header-cell *matHeaderCellDef mat-sort-header class="col-qtd"> Quantidade </mat-header-cell>
+          <mat-cell *matCellDef="let item" class="col-qtd"> {{item.qtddPropostas}} </mat-cell>
+        </ng-container>
+
+        <!-- Coluna Valor -->
+        <ng-container matColumnDef="valor">
+          <mat-header-cell *matHeaderCellDef mat-sort-header class="col-qtd"> Valor </mat-header-cell>
+          <mat-cell *matCellDef="let item" class="col-qtd"> {{item.valor}} </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let i = index; let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+    </div>
+
+  </mat-expansion-panel>
+</div>
